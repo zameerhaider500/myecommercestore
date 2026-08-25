@@ -52,22 +52,22 @@ const Home = () => {
     <div className={styles.featuresGrid}>
       {[
         { 
-          imgSrc: 'transport.png', 
+          imgSrc: '/img/transport.png', 
           title: 'Fast Delivery', 
           desc: 'Get it within 3-5 business days.' 
         },
         { 
-          imgSrc: 'use.png', 
+          imgSrc: '/img/use.png', 
           title: 'Cash on Delivery', 
           desc: 'Pay when you receive your item.' 
         },
         { 
-          imgSrc: 'shield.png', 
+          imgSrc: '/img/shield.png', 
           title: 'Secure Packaging', 
           desc: 'Guaranteed safe arrival.' 
         },
         { 
-          imgSrc: 'diamond.png', 
+          imgSrc: '/img/diamond.png', 
           title: 'Premium Quality', 
           desc: 'Top-tier materials and sound.' 
         }
