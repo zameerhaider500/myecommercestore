@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className={`container ${styles.grid}`}>
       <div className={styles.brand}>
-        <img src={"zh-logo-white.png"} alt="MyStore Logo" style={{ width: "150px", height: "auto", display: "block", marginBottom: "10px", }} />
+        <img src={"/img/zh-logo-white.png"} alt="MyStore Logo" style={{ width: "150px", height: "auto", display: "block", marginBottom: "10px", }} />
         <p>Premium products delivered reliably. Quality you can trust, with the convenience of Cash on Delivery.</p>
       </div>
       <div>
