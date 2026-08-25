@@ -19,7 +19,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <Link to="/" className={styles.logo}>
-          <img src="zh-store-logo.png" alt="MyStore Logo" />
+          <img src="/img/zh-store-logo.png" alt="MyStore Logo" />
         </Link>
         
         <nav className={`${styles.nav} ${isOpen ? styles.active : ''}`}>
