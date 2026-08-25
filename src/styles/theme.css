@@ -1,0 +1,26 @@
+:root {
+  /* Primary Palette */
+  --color-primary: #111111;
+  --color-primary-light: #333333;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  
+  /* Surfaces & Backgrounds */
+  --color-bg-main: #f9fafb;
+  --color-bg-surface: #ffffff;
+  --color-bg-muted: #f3f4f6;
+  
+  /* Text */
+  --color-text-main: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
+  
+  /* Borders */
+  --color-border: #e5e7eb;
+  
+  /* States */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-whatsapp: #25D366;
+}

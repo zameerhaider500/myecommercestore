@@ -1,0 +1,153 @@
+.hero {
+  padding: calc(var(--spacing-4xl) * 1.5) 0;
+  background: var(--color-bg-surface);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle background accent glow */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--color-accent-subtle, rgba(var(--color-accent-rgb, 0, 112, 243), 0.05));
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: var(--color-bg-muted);
+  color: var(--color-accent);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Optional mini status dot inside the badge for modern SaaS/Product feel */
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.content h1 {
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -1.5px;
+  font-weight: 800;
+}
+
+.content p {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+  animation: fadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  opacity: 0;
+}
+
+.imageBox {
+  background: linear-gradient(135deg, var(--color-bg-muted) 0%, rgba(var(--color-accent-rgb, 0, 112, 243), 0.03) 100%);
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xl), 0 20px 40px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageBox:hover {
+  transform: translateY(-6px);
+}
+
+.imageBox img {
+  width: 78%;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageBox:hover img {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+/* Keyframe animations */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-2xl) 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-2xl);
+  }
+  .content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .visual {
+    order: -1;
+  }
+  .imageBox {
+    max-width: 300px;
+  }
+}

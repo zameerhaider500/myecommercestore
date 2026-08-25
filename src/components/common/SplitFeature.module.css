@@ -1,0 +1,76 @@
+.section {
+  padding: var(--spacing-4xl) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+/* This magic line flips the layout for the second section! */
+.reverse {
+  direction: rtl;
+}
+.reverse > * {
+  direction: ltr; /* Keeps text reading left-to-right */
+}
+
+/* Image Styling */
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Text Styling */
+.textWrapper h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+}
+.textWrapper p {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* --- ANIMATION LOGIC --- */
+.imageWrapper {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth easing */
+  
+  /* Desktop default: slide in from the side */
+  opacity: 0;
+  transform: translateX(-60px); 
+}
+.reverse .imageWrapper {
+  transform: translateX(60px); /* Slide from right if reversed */
+}
+
+/* Class added by React when it scrolls into view */
+.visible {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stacks image on top of text */
+    gap: var(--spacing-xl);
+  }
+  .reverse {
+    direction: ltr; /* Reset flip for mobile */
+  }
+  
+  /* Override desktop animation: On mobile, make it slide UP instead */
+  .imageWrapper {
+    transform: translateY(50px); 
+  }
+  .reverse .imageWrapper {
+    transform: translateY(50px);
+  }
+}
