@@ -10,8 +10,8 @@ const Footer = () => (
       </div>
       <div>
         <h4>Quick Links</h4>
-        <Link to="/">Home</Link>
-        <Link to="/product/premium-wireless-headphones">Shop</Link>
+        <Link to="/hero">Home</Link>
+        <Link to="/shop">Shop</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact</Link>
       </div>
