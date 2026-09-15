@@ -42,7 +42,7 @@ const Header = () => {
 
         {/* Logo */}
         <Link to="/" className={styles.logo}>
-          <img src="/public/img/logo-genz.png" alt="MyStore Logo" />
+          <img src="/img/logo-genz.png" alt="MyStore Logo" />
         </Link>
         
         {/* Nav Drawer */}
