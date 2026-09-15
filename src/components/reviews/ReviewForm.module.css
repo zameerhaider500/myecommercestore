@@ -1,0 +1,6 @@
+.form { background: var(--color-bg-surface); padding: var(--spacing-xl); border-radius: var(--radius-lg); border: 1px solid var(--color-border); max-width: 600px; margin: 0 auto; }
+.form h3 { margin-bottom: var(--spacing-lg); font-size: 1.1rem; }
+.row { display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+.row input, .row select { width: 50%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); resize: vertical; font-family: inherit; }
+.success { color: var(--color-success); font-weight: 600; margin-top: var(--spacing-md); font-size: 0.9rem; }

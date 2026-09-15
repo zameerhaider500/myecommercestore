@@ -1,0 +1,32 @@
+.breadcrumb { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--spacing-2xl); }
+.breadcrumb a:hover { color: var(--color-primary); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); }
+.mainImg { background: var(--color-bg-surface); border-radius: var(--radius-xl); padding: var(--spacing-2xl); margin-bottom: var(--spacing-md); border: 1px solid var(--color-border); }
+.mainImg img { width: 100%; mix-blend-mode: multiply; }
+.thumbs { display: flex; gap: var(--spacing-md); }
+.thumb { width: 80px; height: 80px; object-fit: cover; border-radius: var(--radius-md); cursor: pointer; border: 2px solid transparent; opacity: 0.6; transition: all var(--transition-fast); }
+.thumb.active { border-color: var(--color-accent); opacity: 1; }
+
+.info h1 { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+.rating { color: var(--color-warning); margin-bottom: var(--spacing-lg); }
+.priceBox { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-xl); }
+.price { font-size: 2rem; font-weight: 800; }
+.old { text-decoration: line-through; color: var(--color-text-muted); font-size: 1.2rem; }
+.desc { color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--spacing-xl); }
+.features { margin-bottom: var(--spacing-xl); }
+.features li { margin-bottom: var(--spacing-sm); color: var(--color-text-secondary); }
+.stock { font-weight: 600; margin-bottom: var(--spacing-xl); font-size: 0.9rem; }
+
+.actions { display: flex; gap: var(--spacing-md); align-items: center; margin-bottom: var(--spacing-2xl); flex-wrap: wrap; }
+.qtyBox { display: flex; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
+.qtyBox button { padding: 0.8rem 1.2rem; background: var(--color-bg-muted); border: none; cursor: pointer; font-weight: bold; }
+.qtyBox span { padding: 0.8rem 1.5rem; border-left: 1px solid var(--color-border); border-right: 1px solid var(--color-border); font-weight: 600; }
+
+.badges { display: flex; gap: var(--spacing-lg); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
+.badges span { font-size: 0.85rem; color: var(--color-text-secondary); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column; }
+  .actions > * { width: 100%; justify-content: center; }
+}
