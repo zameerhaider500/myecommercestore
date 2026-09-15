@@ -10,7 +10,7 @@ const Footer = () => (
       </div>
       <div>
         <h4>Quick Links</h4>
-        <Link to="#">Home</Link>
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Home</a>
         <Link to="/shop">Shop</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact</Link>
