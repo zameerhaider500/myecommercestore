@@ -6,7 +6,7 @@ import styles from './Cart.module.css';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
-  const shipping = cartTotal > 0 ? 10.00 : 0.00;
+  const shipping = cartTotal > 0 ? 150.00 : 0.00;
 
   if (cartItems.length === 0) {
     return (
