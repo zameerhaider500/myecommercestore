@@ -13,7 +13,7 @@ const Checkout = () => {
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState({ name: '', phone: '', email: '', address: '', city: '', province: '', postalCode: '', notes: '' });
 
-  const shipping = 10.00;
+  const shipping = 150.00;
   const total = cartTotal + shipping;
 
   const handleChange = (e) => {
